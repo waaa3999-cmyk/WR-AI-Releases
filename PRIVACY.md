@@ -1,7 +1,7 @@
 # WR-AI Privacy Policy
 
-Effective September 5, 2026. This policy applies to WR-AI 1.0.0 Direct build
-`096A122-release.1` and WR-AI 1.0.1 Microsoft Store build
+Effective September 13, 2026. This policy applies to WR-AI 1.0.3 Direct build
+`096A123-release.10` and WR-AI 1.0.1 Microsoft Store build
 `096A122-store.2`.
 
 WR-AI processes conversations and files locally on the user's Windows device.
