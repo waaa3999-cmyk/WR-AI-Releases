@@ -1,35 +1,35 @@
 # WR-AI for Windows
 
-This repository is the official binary distribution channel for WR-AI, a local-first desktop AI assistant for Windows. WR-AI 1.0.0 build `096A122-release.1` assets contain the compiled application, local AI models, runtime components, license notices, and integrity manifests. They exclude the WR-AI desktop application's Python, TypeScript/TSX, and Rust source trees, source maps, tests, user files, production databases, logs, checkpoints, private keys, credentials, and development environments. The small Download Installer necessarily embeds a reviewed PowerShell downloader resource and its release manifest; those bootstrap resources perform download and verification and are separate from the WR-AI desktop application source tree. Third-party source-form material required by a component license is identified in the SBOM and license inventory.
+WR-AI is a local-first personal AI workspace for reading documents, discussing their contents, and saving and retrieving information. Qwen performs the reasoning locally; tools extract document text into the conversation context and operate the internal saved workspace.
 
 ## Download and install
 
-1. Open the [latest WR-AI release](https://github.com/waaa3999-cmyk/WR-AI-Releases/releases/latest).
-2. Download **WR-AI-Download-Installer.exe**.
-3. Run the Download Installer, review and accept the WR-AI EULA before payload download begins, and follow the English installer interface. It resumes interrupted downloads, verifies the size and SHA-256 of every part, reconstructs the verified payload, and starts Direct Setup only after verification succeeds. After Direct Setup reports success, it removes the build-specific download, staging, and bootstrap cache. If download or installation fails, the cache and transcript are retained for resume or diagnosis.
+**[Download WR-AI 1.0.3 Installer](https://github.com/waaa3999-cmyk/WR-AI-Releases/releases/download/wr-ai-1.0.3-096A123-release.10/WR-AI-Download-Installer.exe)** | [Release details and checksums](https://github.com/waaa3999-cmyk/WR-AI-Releases/releases/tag/wr-ai-1.0.3-096A123-release.10)
 
-The application payload is split into Release assets no larger than 1900 MiB (1,992,294,400 bytes) each. You do not need to download or join those parts manually when using the Download Installer; it performs the size and SHA-256 checks automatically.
+Open the release and choose **WR-AI-Download-Installer.exe**. It downloads the payload automatically, resumes interrupted downloads, and verifies the sizes and SHA-256 hashes before opening Direct Setup. Review the EULA and installation options. You do not need to join the numbered payload parts manually.
+
+This repository contains distribution documentation only. Compiled application downloads are stored in GitHub Releases, not in repository source files.
 
 ## System requirements
 
-- Windows 10 version 2004 (build 19041) or later, or Windows 11; x64 only.
-- 32 GB RAM recommended, with at least 28 GiB of visible physical memory.
-- A current NVIDIA GPU with at least 4 GB VRAM. The tested baseline is an NVIDIA GeForce RTX 2050 4 GB.
+- Windows 10 build 19041 or later, or Windows 11, x64.
+- At least 28 GiB visible RAM; 32 GB installed RAM is recommended.
+- A compatible NVIDIA CUDA GPU with at least 4 GB VRAM and an appropriate driver.
 - Microsoft Edge WebView2 Runtime.
-- At least 60 GiB of free disk space during download, verification, and installation; retain at least 35 GiB afterward for WR-AI, indexes, revisions, temporary extraction, and user files.
+- At least 60 GiB free space during download/installation and 35 GiB for ongoing application/model storage, plus your documents.
 
-This release does not claim a tested CPU-only or non-NVIDIA fallback.
+Local AI use does not need an activation key, paid API, or continuous internet connection. The initial download requires internet access. CPU-only operation has not been accepted for this release. Performance and OCR accuracy vary with the computer and input; review important extracted figures.
 
 ## Language and privacy
 
-English is the default interface language for a new installation. Arabic remains available in Settings with full right-to-left layout support. The local Qwen model responds in the language used by the user; the interface language does not force model responses into English.
-
-Core chat, document, OCR, search, and model processing run locally. User conversations and files remain in the local WR-AI data directory. Network access is used by the small download installer only to retrieve public release assets from this GitHub repository.
+New installations start in English. Arabic and RTL presentation remain available in Settings. Qwen responds in the user's language. Updates are designed to preserve user data; keep your own backups of important documents.
 
 ## Integrity and licenses
 
-Build `096A122-release.1` is distributed without Authenticode signatures. Windows may show Unknown Publisher or Microsoft Defender SmartScreen warnings. Download only from this official repository, verify the published SHA-256 values, and continue only if you accept the risk of running unsigned installers.
+Read the exact release's signing warning, verification status, requirements, and SHA-256 information before installation. Download only from this repository's official releases.
 
-Each release includes `SHA256SUMS-GITHUB.txt`, `WR-AI-GitHub-Assets.json`, a CycloneDX production SBOM, the WR-AI EULA, Gemma terms and notice, and `THIRD_PARTY_NOTICES.txt` as the generated notice and attribution index. Complete copied license and model-term files are installed in the payload's `licenses` directory and mapped by `LICENSE_FILE_MANIFEST.json`. Verify that the release tag, asset sizes, and checksums match the files you downloaded.
+Each release includes the WR-AI EULA, Gemma notices and terms, production SBOM, THIRD_PARTY_NOTICES, license-file manifest, and checksum information. Gemma's terms and prohibited-use policy apply. WR-AI source code, private credentials/keys, production databases, user files, logs, checkpoints, and development environments are not distributed.
 
-Support and release questions: use the repository [Issues](https://github.com/waaa3999-cmyk/WR-AI-Releases/issues) page.
+Official website: [getwrai.com](https://getwrai.com/).
+
+For the update details and known limitations, read the [1.0.3 release notes](https://github.com/waaa3999-cmyk/WR-AI-Releases/releases/tag/wr-ai-1.0.3-096A123-release.10).
